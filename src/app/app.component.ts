@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  showHeaderMenu: boolean = false;
+
+   goToSection(elm:any){
+     //console.log(elm)
+     this.toggleHeaderMenu()
+     elm.scrollIntoView({behavior: "smooth"})
+   }
+
+   toggleHeaderMenu(){
+     this.showHeaderMenu=!this.showHeaderMenu
+   }
+
+
+  spotlightStyle = {};
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(e: MouseEvent): void {
+    this.spotlightStyle = {
+      left: e.clientX + 'px',
+      top: e.clientY + 'px'
+    };
+  }
+
 }

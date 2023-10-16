@@ -12,6 +12,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { AcademicProjectsComponent } from './academic-projects/academic-projects.component';
 import { WhyHireMeComponent } from './why-hire-me/why-hire-me.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { WhyHireMeComponent } from './why-hire-me/why-hire-me.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
