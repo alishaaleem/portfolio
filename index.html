@@ -8,7 +8,13 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <div class="background-container">
+  <div class="background-container" style="
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/background-image.jpg');
+    background-size: cover;">
     <!-- <div [ngStyle]="spotlightStyle" class="absolute w-32 h-32 rounded-full bg-gradient-to-r from-blue-600 to-transparent shadow-md mix-blend-overlay"></div> -->
     <!-- Your content goes here -->
     <div class="container-fluid pageContent" [class.bgBlur]="showHeaderMenu">
