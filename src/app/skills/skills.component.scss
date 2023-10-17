@@ -28,7 +28,7 @@
 
 .skill-row{
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   .logo{
     width: 5rem;
     height: 5rem;
@@ -77,6 +77,67 @@
   border-radius: 10px;
   color:#fff;
   text-align: center;
+
+  }
+
+  .skill-row{
+    .logo{
+      width: 5rem;
+      height: 5rem;
+      margin: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+      // box-shadow: 1px 1px 1px black;
+      filter: drop-shadow(5px 5px 2px rgba(0, 0, 0,1));
+      transition: all 0.2s linear;
+        .name{
+          line-height: 1.2;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          transform: translateY(-15px);
+          opacity: 0;
+          transform-origin: top;
+          transition: all 0.2s linear 0.1s;
+      }
+    }
+    &:hover .logo{
+      opacity: 1;
+      transform: scale(1.1);
+      filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.7));
+      .name{
+          transform: translateY(0px);
+          opacity: 1;
+      }
+  }
+  }
+
+
+  // .logo:hover{
+  //   opacity: 1;
+  // transform: scale(1.1);
+  // filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.7));
+  // }
+  // .name:hover{
+  //   transform: translateY(0px);
+  //      opacity: 1;
+  // }
+
+// &:hover .logo{
+//   opacity: 1;
+//   transform: scale(1.1);
+//   filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.7));
+//   .name{
+//       transform: translateY(0px);
+//       opacity: 1;
+//   }
+// }
+
+.stack-column p:hover{
+  transform: scale(1.1);
 }
 
 .stack-column p{

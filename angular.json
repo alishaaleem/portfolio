@@ -31,12 +31,10 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/bootstrap/scss/bootstrap.scss",
-              "./node_modules/tailwindcss/base.css",
-              "./node_modules/tailwindcss/components.css",
-              "./node_modules/tailwindcss/utilities.css"
+              "./node_modules/bootstrap/scss/bootstrap.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {

@@ -1,4 +1,34 @@
 /* your-component.component.css */
+
+.post-header-info_post{
+  flex-wrap: wrap;
+  gap: 20px;
+.post-header-info_keywords{
+
+font-size: 12px;
+letter-spacing: .4px;
+text-align: center;
+text-transform: uppercase;
+display: flex;
+align-items: center;
+gap: 5px;
+padding: 5px;
+border-radius:inherit;;
+.post-header-info_violet{
+  background-color: #c4b2f6;
+  color: #7e57eb;
+  border-radius: 5px;
+}
+
+}}
+
+ul{
+  li{
+  list-style-type: none;
+
+  }
+}
+
 .fullscreen-container {
   padding-top:10px;
   padding-bottom: 10px;

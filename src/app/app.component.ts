@@ -9,6 +9,10 @@ export class AppComponent {
   title = 'portfolio';
   showHeaderMenu: boolean = false;
 
+  ngOnInit() {
+    
+  }
+
    goToSection(elm:any){
      //console.log(elm)
      this.toggleHeaderMenu()
