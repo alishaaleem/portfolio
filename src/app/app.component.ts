@@ -1,4 +1,7 @@
+import { ElementRef } from '@angular/core';
+import { ViewChild } from '@angular/core';
 import { Component, HostListener } from '@angular/core';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -6,22 +9,34 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  @ViewChild('home') home!: HomeComponent;
+
   title = 'portfolio';
   showHeaderMenu: boolean = false;
+  showHeader = false;
 
-  ngOnInit() {
-    
+  @HostListener('document:scroll', ['$event']) onScrollEvent($event: any) {
+    // const windowHeight = window.innerHeight;
+    const boundingHomeElm = this.home.content.nativeElement.getBoundingClientRect();
+    console.log(window.pageYOffset, boundingHomeElm);
+     this.showHeader = boundingHomeElm.bottom < 0;
   }
 
-   goToSection(elm:any){
-     //console.log(elm)
-     this.toggleHeaderMenu()
-     elm.scrollIntoView({behavior: "smooth"})
-   }
+  ngAfterViewInit() {
+    console.log('Values on ngAfterViewInit():');
+    console.log(this.home.content)
+  }
 
-   toggleHeaderMenu(){
-     this.showHeaderMenu=!this.showHeaderMenu
-   }
+  goToSection(elm:any){
+    //console.log(elm)
+    this.toggleHeaderMenu()
+    elm.scrollIntoView({behavior: "smooth"})
+  }
+
+  toggleHeaderMenu(){
+    this.showHeaderMenu=!this.showHeaderMenu
+  }
 
 
   spotlightStyle = {};
@@ -32,6 +47,7 @@ export class AppComponent {
       left: e.clientX + 'px',
       top: e.clientY + 'px'
     };
+    //console.log(this.spotlightStyle)
   }
 
 }

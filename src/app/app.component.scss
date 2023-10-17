@@ -3,12 +3,46 @@
   left: 0; /* Sets it to the left of the viewport */
   width: 100%; /* Makes the width cover the entire viewport width */
   height: 100%; /* Makes the height cover the entire viewport height */
-  // background-image: url('assets/background-image.png');
-  // background-image: url('../assets/background-image.png');
-  background-size: cover;
+  &:before{
+    content:'';
+    background-image: url('src/assets/background-image.png') ;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.header{
+  position: fixed;
+  transition: all linear .2s;
+  top: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  color: #ffffff;
+  background-color: rgba(101, 116, 255, 0.473);
+  padding: 20px;
+  &.showHeader{
+    transform: translateY(0);
+
+  }
+}
+
+.spotlight{
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at center, rgb(254, 255, 255,.2) 0, rgba(255, 255, 255, 0) 50%);
+
 }
 
 // .pageSection {
-//   border: 1px solid black;
-// }
+  //   border: 1px solid black;
+  // }
 

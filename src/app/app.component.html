@@ -1,58 +1,68 @@
-<div class="background-container" style="background-image: url('src/assets/background-image.png');">
+
+<div class="background-container" >
+
   <!-- <div [ngStyle]="spotlightStyle" class="absolute w-32 h-32 rounded-full bg-gradient-to-r from-blue-600 to-transparent shadow-md mix-blend-overlay"></div> -->
   <!-- Your content goes here -->
+  <div class="spotlight" [ngStyle]="spotlightStyle"></div>
+
   <div class="container-fluid pageContent" [class.bgBlur]="showHeaderMenu">
+      <div class="row header justify-content-center" [class.showHeader]="showHeader">
+          <div class="col text-end">Alisha Anjum Aleem</div>
+          <div class="col text-start">Alisha Anjum Aleem</div>
+      </div>
 
-  <!-- <header class="fixed-top" [class.headerBgHide]="showHeaderMenu"> <!-- navbar navbar-expand navbar-dark fixed-top-->
 
-      <!-- <div class="logo ml-4 my-2 pull-left" [class.enlarge]="showHeaderMenu">
-          AA
-      </div> -->
-<!--
-      <div class="headerMenu mr-4 my-2 pull-right" [class.displayMenu]="showHeaderMenu">
-          <div class="btnMenu" (click)="toggleHeaderMenu()">
-              <div class="stroke"></div>
-          </div>
-          <div *ngIf="showHeaderMenu" class="mobileMenuOverlay d-md-none d-block"></div>
-          <ul class="">
-              <li class="">
-                  <a class="" (click)="goToSection(home)">Home</a>
-              </li>
-              <li class="">
-                  <a class="" (click)="goToSection(skills)">Skills</a>
-              </li>
-              <li class="">
-                  <a class="" (click)="goToSection(projects)">Projects</a>
-              </li>
-              <li class="">
-                  <a class="" (click)="goToSection(contact)">Contact Me</a>
-              </li>
+      <!-- <header class="fixed-top" [class.headerBgHide]="showHeaderMenu"> <!-- navbar navbar-expand navbar-dark fixed-top-->
 
-          </ul>
+          <!-- <div class="logo ml-4 my-2 pull-left" [class.enlarge]="showHeaderMenu">
+              AA
+          </div> -->
+          <!--
+              <div class="headerMenu mr-4 my-2 pull-right" [class.displayMenu]="showHeaderMenu">
+                  <div class="btnMenu" (click)="toggleHeaderMenu()">
+                      <div class="stroke"></div>
+                  </div>
+                  <div *ngIf="showHeaderMenu" class="mobileMenuOverlay d-md-none d-block"></div>
+                  <ul class="">
+                      <li class="">
+                          <a class="" (click)="goToSection(home)">Home</a>
+                      </li>
+                      <li class="">
+                          <a class="" (click)="goToSection(skills)">Skills</a>
+                      </li>
+                      <li class="">
+                          <a class="" (click)="goToSection(projects)">Projects</a>
+                      </li>
+                      <li class="">
+                          <a class="" (click)="goToSection(contact)">Contact Me</a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+          </header>  -->
+
+          <main class="row flex-column" [class.bodyBlur]="showHeaderMenu">
+              <section class="pageSection">
+                  <app-home #home></app-home>
+              </section>
+              <section #projects class="pageSection">
+                  <app-work-experience></app-work-experience>
+              </section>
+              <section #skills class="pageSection">
+                  <app-skills></app-skills>
+              </section>
+
+              <section #contact class="pageSection">
+                  <app-contact-me></app-contact-me>
+              </section>
+
+          </main>
 
       </div>
 
-</header>  -->
-
-  <main class="row flex-column" [class.bodyBlur]="showHeaderMenu">
-      <section #home class="pageSection">
-          <app-home></app-home>
-      </section>
-      <section #projects class="pageSection">
-        <app-work-experience></app-work-experience>
-    </section>
-      <section #skills class="pageSection">
-          <app-skills></app-skills>
-      </section>
-
-      <section #contact class="pageSection">
-          <app-contact-me></app-contact-me>
-      </section>
-
-  </main>
-
-</div>
-
-</div>
+  </div>
 
 
+  
