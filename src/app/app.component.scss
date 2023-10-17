@@ -5,7 +5,7 @@
   height: 100%; /* Makes the height cover the entire viewport height */
   &:before{
     content:'';
-    background-image: url('src/assets/background-image.png') ;
+    background-image: url('../assets/background-image.png') ;
     background-size: cover;
     position: fixed;
     top: 0;
