@@ -3,7 +3,8 @@
   left: 0; /* Sets it to the left of the viewport */
   width: 100%; /* Makes the width cover the entire viewport width */
   height: 100%; /* Makes the height cover the entire viewport height */
-  background-image: url('assets/background-image.png');
+  // background-image: url('assets/background-image.png');
+  background-image: url('/src/assets/background-image.jpg');
   background-size: cover;
 }
 
