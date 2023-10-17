@@ -42,7 +42,14 @@
 
 }
 
-// .pageSection {
-  //   border: 1px solid black;
-  // }
+
+.contact-icons{
+  display:flex;
+  justify-content: center;
+  gap: 50px;
+  .connect-icon{
+    height: 40px;
+    width: 40px;
+  }
+}
 
